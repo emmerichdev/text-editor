@@ -8,29 +8,21 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.emmerichbrowne.texteditor.HelloController">
    <top>
-      <MenuBar BorderPane.alignment="CENTER">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-              <MenuItem mnemonicParsing="false" onAction="#onNew" text="New" />
-                  <MenuItem mnemonicParsing="false" onAction="#onOpen" text="Open" />
-                  <MenuItem mnemonicParsing="false" onAction="#onSave" text="Save" />
-                  <MenuItem mnemonicParsing="false" onAction="#onSaveAs" text="Save as..." />
-                  <MenuItem mnemonicParsing="false" onAction="#onExit" text="Exit" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
+       <MenuBar BorderPane.alignment="CENTER">
+           <Menu mnemonicParsing="false" text="File">
+               <MenuItem mnemonicParsing="false" onAction="#onNew" text="New"/>
+               <MenuItem mnemonicParsing="false" onAction="#onOpen" text="Open"/>
+               <MenuItem mnemonicParsing="false" onAction="#onSave" text="Save"/>
+               <MenuItem mnemonicParsing="false" onAction="#onSaveAs" text="Save as..."/>
+               <MenuItem mnemonicParsing="false" onAction="#onExit" text="Exit"/>
+           </Menu>
+           <Menu mnemonicParsing="false" text="Edit">
+               <MenuItem mnemonicParsing="false" text="Delete"/>
+           </Menu>
+           <Menu mnemonicParsing="false" text="Help">
+               <MenuItem mnemonicParsing="false" text="About"/>
+           </Menu>
+       </MenuBar>
    </top>
    <center>
       <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
