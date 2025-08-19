@@ -27,7 +27,7 @@ tasks.withType<JavaCompile> {
 
 application {
     mainModule.set("com.emmerichbrowne.texteditor")
-    mainClass.set("com.emmerichbrowne.texteditor.HelloApplication")
+    mainClass.set("com.emmerichbrowne.texteditor.Launcher")
 }
 
 javafx {
