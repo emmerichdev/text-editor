@@ -2,15 +2,20 @@ package com.emmerichbrowne.texteditor;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
 import javafx.scene.control.TextArea;
 
 public class HelloController {
 
     @FXML
-    private TextArea textArea;
+    private TabPane tabPane;
 
     public void onNew() {
-        textArea.clear();
+        Tab tab = new Tab("Untitled");
+        tab.setContent(new TextArea());
+        tabPane.getTabs().add(tab);
+        tabPane.getSelectionModel().select(tab);
     }
 
     public void onOpen() {
