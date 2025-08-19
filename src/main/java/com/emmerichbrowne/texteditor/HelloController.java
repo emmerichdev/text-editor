@@ -11,8 +11,18 @@ public class HelloController {
     @FXML
     private TabPane tabPane;
 
+    public void initialize() {
+        onNew();
+    }
+
     public void onNew() {
         Tab tab = new Tab("Untitled");
+        tab.setClosable(true);
+        tab.setOnCloseRequest(event -> {
+            if (tabPane.getTabs().size() == 1) {
+                event.consume();
+            }
+        });
         tab.setContent(new TextArea());
         tabPane.getTabs().add(tab);
         tabPane.getSelectionModel().select(tab);
