@@ -11,11 +11,12 @@
    <top>
        <MenuBar BorderPane.alignment="CENTER">
            <Menu mnemonicParsing="false" text="File">
-               <MenuItem mnemonicParsing="false" onAction="#onNew" text="New"/>
-               <MenuItem mnemonicParsing="false" onAction="#onOpen" text="Open"/>
-               <MenuItem mnemonicParsing="false" onAction="#onSave" text="Save"/>
-               <MenuItem mnemonicParsing="false" onAction="#onSaveAs" text="Save as..."/>
-               <MenuItem mnemonicParsing="false" onAction="#onExit" text="Exit"/>
+               <MenuItem mnemonicParsing="false" onAction="#onNew" text="New" accelerator="Ctrl+T"/>
+               <MenuItem mnemonicParsing="false" onAction="#onOpen" text="Open" accelerator="Ctrl+O"/>
+               <MenuItem mnemonicParsing="false" onAction="#onSave" text="Save" accelerator="Ctrl+S"/>
+               <MenuItem mnemonicParsing="false" onAction="#onSaveAs" text="Save as..." accelerator="Ctrl+Shift+S"/>
+               <MenuItem mnemonicParsing="false" onAction="#onCloseTab" text="Close Tab" accelerator="Ctrl+W"/>
+               <MenuItem mnemonicParsing="false" onAction="#onExit" text="Exit" accelerator="Ctrl+Q"/>
            </Menu>
            <Menu mnemonicParsing="false" text="Edit">
                <MenuItem mnemonicParsing="false" text="Delete"/>
