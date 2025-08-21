@@ -1,9 +1,7 @@
 plugins {
     java
     application
-    id("org.javamodularity.moduleplugin") version "1.8.15"
-    id("org.openjfx.javafxplugin") version "0.0.13"
-    id("org.beryx.jlink") version "2.25.0"
+    id("org.openjfx.javafxplugin") version "0.1.0"
 }
 
 group = "com.emmerichbrowne"
@@ -12,8 +10,6 @@ version = "1.0-SNAPSHOT"
 repositories {
     mavenCentral()
 }
-
-val junitVersion = "5.12.1"
 
 java {
     toolchain {
@@ -26,7 +22,6 @@ tasks.withType<JavaCompile> {
 }
 
 application {
-    mainModule.set("com.emmerichbrowne.texteditor")
     mainClass.set("com.emmerichbrowne.texteditor.Launcher")
 }
 
@@ -38,18 +33,4 @@ javafx {
 dependencies {
     implementation("org.controlsfx:controlsfx:11.2.1")
     implementation("org.kordamp.ikonli:ikonli-javafx:12.3.1")
-    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
-}
-
-tasks.withType<Test> {
-    useJUnitPlatform()
-}
-
-jlink {
-    imageZip.set(layout.buildDirectory.file("/distributions/app-${javafx.platform.classifier}.zip"))
-    options.set(listOf("--strip-debug", "--compress", "2", "--no-header-files", "--no-man-pages"))
-    launcher {
-        name = "app"
-    }
 }
